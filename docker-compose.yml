@@ -1,0 +1,28 @@
+
+
+# NOTE:
+# When switching between 'fresh' and 'persistent' profiles, always run:
+#   docker compose down
+# before starting the other profile to avoid port conflicts on 6080.
+version: '3.8'
+
+services:
+  xfce-novnc-brave:
+    image: xfce-novnc-brave-slim
+    container_name: xfce-novnc-brave
+    ports:
+      - "6080:6080"
+    restart: unless-stopped
+    profiles:
+      - fresh
+
+  xfce-novnc-brave-persistent:
+    image: xfce-novnc-brave-slim
+    container_name: xfce-novnc-brave-persistent
+    ports:
+      - "6080:6080"
+    volumes:
+      - ./root-data:/root
+    restart: unless-stopped
+    profiles:
+      - persistent
