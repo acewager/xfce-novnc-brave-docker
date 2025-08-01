@@ -2,7 +2,7 @@
 
 Run a lightweight remote Linux desktop with **XFCE4**, **Brave Browser**, and **noVNC** fully inside a Docker container.
 
-Accessible via web browser using VNC (noVNC), with full persistence of user data (including Brave profiles, settings, downloaded files, etc.).
+Accessible via web browser using VNC (noVNC), with full persistence of user data (including Brave profiles, settings, downloaded files, etc).
 
 ---
 
